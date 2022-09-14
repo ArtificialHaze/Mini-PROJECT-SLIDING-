@@ -1,0 +1,102 @@
+/* GLOBAL STYLING */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  height: 100vh;
+  background-color: lightblue;
+}
+
+button {
+  background-color: white;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px;
+  transition: all 320ms ease-in-out;
+}
+
+button:hover {
+  color: #333;
+}
+button:focus {
+  outline: none;
+}
+
+/* MAIN STYLING */
+
+.slider__container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.slider__left--side {
+  position: absolute;
+  height: 100%;
+  width: 35%;
+  top: 0;
+  left: 0;
+  transition: transform 250ms ease-in-out;
+}
+
+.slider__left--side > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.slider__left--side h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.slider__right--side {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 250ms ease-in-out;
+}
+
+.slider__right--side > img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.slider__action--buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider__action--buttons .down__button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.slider__action--buttons .up__button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
